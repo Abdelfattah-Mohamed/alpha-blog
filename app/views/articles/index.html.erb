@@ -11,8 +11,9 @@
     <tr>
         <th> <%= article.title %> </th>
         <th> <%= article.description %> </th>
-        <th> <%= link_to "edit", edit_article_path(article) %></th>
+        <th> <%= link_to "Edit", edit_article_path(article) %></th>
         <th> <%= link_to "show", article_path(article) %></th>
+        <th> <%= link_to "Delete", article_path(article), method: :Delete, data: {confirm: "Are you sure?"}%></th>
     </tr>
     <% end %>    
     
