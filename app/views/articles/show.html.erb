@@ -8,5 +8,6 @@
     description: <%= @article.description %>
 </p>
 
-<%= link_to "edit this article", edit_article_path(@article) %>
-<%= link_to "return to articles list", articles_path %>
+<%= link_to "edit this article", edit_article_path(@article) %> ||
+<%= link_to "return to articles list", articles_path %> ||
+<%= link_to "Delete this article", article_path(@article), method: :delete, data: {confirm: "Are you sure?"} %>
