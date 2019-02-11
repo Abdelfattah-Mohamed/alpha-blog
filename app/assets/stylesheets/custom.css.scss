@@ -1,2 +1,59 @@
+$navbar-default-bg: black;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#logo{
+    text-decoration: none;
+    font-weight: bold;
+    float: left;
+}
+
+#logo:hover{
+    background: #286090;
+    color: black;
+}
+
+#articles{
+     background: #BD2B26;
+     color: white;
+}
+
+.center{
+    text-align: center;
+}
+
+.jumbotron {
+    background-image: asset-url('rails-1.png');
+    background-size: cover;
+    height: 500px;
+}
+
+.jumbotron .signup-btn{
+    background-color: black;
+    margin: 30px;
+}
+
+.jumbotron .signup-btn:hover{
+    background-color: #BD2B26;
+}
+
+
+footer{
+    border-top: 1px bold black;
+    background-color: #F4F4F4;
+}
+
+footer ul{
+    float: right;
+    list-style: none; 
+}
+
+footer ul li{
+    float: left;
+    margin-left: 15px;
+}
+
+.cancle{
+    margin-bottom: 15px;
+}
