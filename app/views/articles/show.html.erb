@@ -1,13 +1,14 @@
-<h1> The new article </h1>
+<h2 align="center"> <%= @article.title %>  </h2>
+    
 
-<p>
-    title: <%= @article.title %>
-</p>
+<div class="well center">
+    <h3 class="center"> Description </h3>
+    <hr>
+    <%= simple_format(@article.description) %> 
+    <hr>
+    <%= link_to "Articles", articles_path, class: "btn btn-success" %> ||
+    <%= link_to "Edit", edit_article_path(@article), class: "btn btn-primary" %> ||
+    <%= link_to "Delete", article_path(@article), method: :delete, data: {confirm: "Are you sure?"},class: "btn btn-danger" %>
+</div>
 
-<p>
-    description: <%= @article.description %>
-</p>
 
-<%= link_to "edit this article", edit_article_path(@article) %> ||
-<%= link_to "return to articles list", articles_path %> ||
-<%= link_to "Delete this article", article_path(@article), method: :delete, data: {confirm: "Are you sure?"} %>
