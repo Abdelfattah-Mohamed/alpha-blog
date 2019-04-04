@@ -1,0 +1,39 @@
+<% if @user.errors.any? %>
+    <h2>The following errors prevented the article from getting created</h2>
+    <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+        <% end %>
+    </ul>
+<% end %>
+
+
+<div class="row">
+    
+    <%=  form_for @user do |f| %>
+    <div class="form-group">
+        <%= f.label :username %>
+        <div >
+        <%= f.text_field :username, class: "form-control", id: "exampleInputTitle1", placeholder: "Enter User name" %>
+        </div>
+    </div>
+        
+    <div class="form-group">
+        <%= f.label :email %>
+        <%= f.email_field :email, class: "form-control", id: "exampleInputDescription1", placeholder: "Enter Email" %>
+    </div>
+    
+    <div class="form-group">
+        <%= f.label :password %>
+        <%= f.password_field :password, class: "form-control", id: "exampleInputDescription1", placeholder: "Enter password" %>
+    </div>
+    
+    <div class="form-group">
+        <%= f.submit(@user.new_record? ? "SignUp" : "update user", class: "btn btn-primary") %>
+    </div>
+</div>
+    <%end%>
+<div class="col-sm-6 col-sm-offsit-4 cancle", align="center">
+    <%= link_to " Cancle", articles_path, class: "btn btn-primary glyphicon glyphicon-remove" %>
+</div>
+
