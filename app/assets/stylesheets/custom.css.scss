@@ -3,6 +3,9 @@ $navbar-default-bg: black;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.background{
+    background-image:url("background.png");
+}
 #logo{
     text-decoration: none;
     font-weight: bold;
@@ -34,9 +37,9 @@ $navbar-default-bg: black;
 }
 
 .jumbotron {
-    background-image: asset-url('rails-1.png');
+    background-image: asset-url('redhat-white.png');
     background-size: cover;
-    height: 500px;
+    height: 800px;
 }
 
 .jumbotron .signup-btn{
